@@ -5,6 +5,7 @@ var userProfiles = new mongoose.Schema({
   f_name: String,
   l_name: String,
   profileName: String,
+  email: String,
   avatar: String,
   tictactoe_stats: {
     wins: Number,
@@ -21,7 +22,7 @@ var userProfiles = new mongoose.Schema({
     totalGamesPlayed: Number
   },
   createdAt: { type: Date, default: Date.now }
-})
+});
 
 var userProfile = mongoose.model('userProfiles', userProfiles);
 

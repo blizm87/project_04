@@ -8,6 +8,7 @@ var testPlayer = new userProfile({
   f_name: 'Kyle',
   l_name: 'Laverne',
   profileName: "Players prolfile name",
+  email: "ldfjsdf@gmail.com",
   avatar: 'Avatar image',
   tictactoe_stats: {
     wins: 34,
@@ -17,8 +18,8 @@ var testPlayer = new userProfile({
     totalGamesPlayed: 57
   },
   trivia_stats: {
-    rightAnswers: 244,
-    wrongAnswers: 434,
+    right_Answers: 244,
+    wrong_Answers: 434,
     rw_ratio: 44,
     totalQuestionsAsked: 189,
     totalGamesPlayed: 53
