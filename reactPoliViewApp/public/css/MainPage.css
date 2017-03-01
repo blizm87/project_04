@@ -1,3 +1,11 @@
 h1 {
-  background-color: blue;
+  background-color: white;
+}
+
+.pure-g {
+  border: 1px solid orange;
+}
+
+.pure-u-1-3{
+
 }
