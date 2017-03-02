@@ -9,19 +9,19 @@ class MainPage extends Component {
   render() {
     return (
       <div>
-        <div className="main_container">
+        <div className="main_Container">
           <h1>
             PoliView.com
           </h1>
           <QuoteOfTheDay />
           <div className="pure-g">
-            <div className="pure-u-1-3">
+            <div className="pure-u-1-3" id="youtubeFrame_Container">
               <YoutubeFrame />
             </div>
-            <div className="pure-u-1-3">
+            <div className="pure-u-1-3" id="currentEvents_Container">
               <CurrentEvents />
             </div>
-            <div className="pure-u-1-3">
+            <div className="pure-u-1-3" id="misc_Container">
               <Misc />
             </div>
           </div>

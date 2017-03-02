@@ -1,8 +1,29 @@
+#currentEvents {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#header {
+  border-bottom: 1px solid black;
+}
+
+#newsFeedHeader {
+  display: inline-block;
+}
+
 #newsSectionContainer {
-  height: 15em;
+  height: 30em;
   overflow: scroll;
 }
 
 #newsSectionContainer > article {
-  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#feedChanger {
+  background-color: lightgrey;
+}
+
+#newsFeedHeader>span {
+  padding-right: 1.5em;
 }

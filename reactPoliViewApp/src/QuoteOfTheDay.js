@@ -7,7 +7,7 @@ class QuoteOfTheDay extends Component {
     this.state = {};
   }
 
-  componentWillMount() {
+  getQuote() {
     const url = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
     fetch(url).then( res => res.json() ).then( data => {
       console.log(data)
@@ -19,6 +19,10 @@ class QuoteOfTheDay extends Component {
         quote_content: newContent
       });
     });
+  }
+
+  componentWillMount() {
+    this.getQuote();
   }
 
   render() {
