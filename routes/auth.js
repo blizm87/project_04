@@ -9,7 +9,7 @@ router.get('/youtube/login', function(req, res, next){
   if(!process.env.prod) {
     var redirect_uri = 'http://127.0.0.1:3001/auth/youtube/callback';
   } else {
-      var redirect_uri = 'https://arcane-wave-24103.herokuapp.com/auth/callback';
+      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/callback';
     }
 
   const url = 'https://accounts.google.com/o/oauth2/v2/auth';
@@ -21,7 +21,7 @@ router.get('/youtube/callback', (req, res, next) => {
   if(!process.env.prod) {
     var redirect_uri = 'http://127.0.0.1:3001/auth/youtube/callback';
   } else {
-      var redirect_uri = 'https://arcane-wave-24103.herokuapp.com/auth/callback';
+      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/callback';
     }
   const code = req.query.code;
   const state = req.query.state;
@@ -38,7 +38,7 @@ router.get('/youtube/callback', (req, res, next) => {
     req.session.access_token = data.access_token;
     request.get(`https://www.googleapis.com/plus/v1/people/me?access_token=${req.session.access_token}`, (err, response, bod) => {
       req.session.user_data = bod;
-      res.redirect('http://127.0.0.1:3000');
+      res.redirect('https://pacific-savannah-27114.herokuapp.com/');
     });
   });
 });
@@ -56,7 +56,7 @@ router.get('/youtube/signout', function(req, res, next){
   console.log( 'I am the access_token: ' + req.session.access_token)
   req.session.access_token = ' ';
   req.session.user_data = ' ';
-  res.redirect('http://127.0.0.1:3000');
+  res.redirect('https://pacific-savannah-27114.herokuapp.com/');
 });
 
 module.exports = router;
