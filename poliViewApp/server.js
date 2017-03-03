@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const hbs = require('express-handlebars');
@@ -14,6 +15,7 @@ const io = require('socket.io')(http);
 // CONFIG
 
 require('./db/config');
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -25,7 +27,6 @@ app.set('view engine', 'hbs');
 // ROUTES
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
-app.use('/mainpage', require('./routes/mainpage'));
 
 // SOCKETS
 // const sockets = require('./routes/sockets')(io);
