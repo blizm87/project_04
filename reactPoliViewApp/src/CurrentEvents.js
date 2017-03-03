@@ -36,7 +36,7 @@ class CurrentEvents extends Component {
           <h4 key={i}>published by: {article.author}</h4>
           <p key={i+1}>{article.title}</p>
           <a href={article.url}>
-            <img key={i+2} src={article.urlToImage} alt="Error!!! Did not load!" width="450" height="300"/>
+            <img key={i+2} className="pure-img" src={article.urlToImage} alt="Error!!! Did not load!" width="450" height="300"/>
           </a>
           <p key={i+3}>{article.description}</p>
         </article>
@@ -46,7 +46,7 @@ class CurrentEvents extends Component {
       <div id="currentEvents">
         <div id="header">
           <h3 id="newsFeedHeader"><span>Current Events:</span>
-          <select onChange={this.handleSelectChange} id="feedChanger">
+          <select className="pure-button" onChange={this.handleSelectChange} id="feedChanger">
             <option value="usa-today">USA TODAY</option>
             <option value="the-economist">Economics</option>
             <option value="techradar">Technology</option>
