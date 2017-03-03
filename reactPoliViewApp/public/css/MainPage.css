@@ -82,3 +82,7 @@ nav>section>span {
    opacity: 1;
    transition: opacity 2000ms ease-in;
 }
+
+#spinGlobe {
+  float: right;
+}

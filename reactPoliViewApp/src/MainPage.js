@@ -18,6 +18,7 @@ class MainPage extends Component {
             <h1>
               PoliView.com
             </h1>
+                  <img id="pure-img" src="http://bestanimations.com/Earth&Space/Earth/earth-spinning-rotating-animation-23.gif" alt="Error!!! Did not load!" width="75" />
             <nav>
               <section >
                   <span>Login with:</span>
