@@ -9,7 +9,7 @@ router.get('/youtube/login', function(req, res, next){
   if(!process.env.prod) {
     var redirect_uri = 'http://127.0.0.1:3001/auth/youtube/callback';
   } else {
-      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/callback';
+      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/youtube/callback';
     }
 
   const url = 'https://accounts.google.com/o/oauth2/v2/auth';
@@ -21,7 +21,7 @@ router.get('/youtube/callback', (req, res, next) => {
   if(!process.env.prod) {
     var redirect_uri = 'http://127.0.0.1:3001/auth/youtube/callback';
   } else {
-      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/callback';
+      var redirect_uri = 'https://hidden-reaches-26134.herokuapp.com/auth/youtube/callback';
     }
   const code = req.query.code;
   const state = req.query.state;
